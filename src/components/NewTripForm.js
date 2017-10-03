@@ -15,7 +15,7 @@ class NewTripForm extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000/api/v1/countries')
+    fetch('https://trip-tracker-api.herokuapp.com/api/v1/countries')
     .then(res => res.json())
     .then(json => this.setState({countries: json}))
   }
@@ -85,7 +85,7 @@ class NewTripForm extends React.Component {
   }
 
   fetchCities = (country_id) => {
-    fetch(`http://localhost:3000/api/v1/countries/${country_id}`, {
+    fetch(`https://trip-tracker-api.herokuapp.com/api/v1/countries/${country_id}`, {
       method: 'get',
       headers: {
         'Accept': 'application/json',

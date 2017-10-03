@@ -27,7 +27,7 @@ class TripContainer extends React.Component {
   }
 
   deleteTrip = (trip) => {
-    fetch(`http://localhost:3000/api/v1/trips/${trip.id}`, {
+    fetch(`https://trip-tracker-api.herokuapp.com/api/v1/trips/${trip.id}`, {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json',

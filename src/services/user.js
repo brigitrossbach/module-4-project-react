@@ -1,5 +1,5 @@
 export function createUser(userParams) {
-  return fetch('http://localhost:3000/api/v1/users', {
+  return fetch('https://trip-tracker-api.herokuapp.com/api/v1/users', {
       method: 'post',
       body : userParams,
       headers: {
@@ -11,7 +11,7 @@ export function createUser(userParams) {
 }
 
 export function logInUser(userParams) {
-  return fetch('http://localhost:3000/api/v1/login', {
+  return fetch('https://trip-tracker-api.herokuapp.com/api/v1/login', {
       method: 'post',
       body: userParams,
       headers: {

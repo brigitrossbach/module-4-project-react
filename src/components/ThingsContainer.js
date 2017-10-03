@@ -18,7 +18,7 @@ class ThingsContainer extends React.Component {
 
   addSavedThing = (thing) => {
     const newBody = JSON.stringify({description: thing.price, name: thing.name, url: thing.url, category: this.state.currentFilter, trip_id: this.props.tripId, image_url: thing.image_url})
-    fetch('http://localhost:3000/api/v1/things', {
+    fetch('https://trip-tracker-api.herokuapp.com/api/v1/things', {
       method: 'post',
       body: newBody,
       headers: {'Accept': 'application/json', 'Content-Type': 'application/json'}
@@ -43,7 +43,7 @@ class ThingsContainer extends React.Component {
       filter = 'attractions'
     }
     let newBody = JSON.stringify({city: this.props.city.split(' ').join('+'), country: this.props.country.split(' ').join('+'), filter: filter})
-    fetch('http://localhost:3000/api/v1/get-things', {
+    fetch('https://trip-tracker-api.herokuapp.com/api/v1/get-things', {
       method: 'post',
       body: newBody,
       headers: {
@@ -68,7 +68,7 @@ class ThingsContainer extends React.Component {
 
   deleteSavedThing = (thing) => {
     let thingId= thing.id
-    fetch(`http://localhost:3000/api/v1/things/${thingId}`, {
+    fetch(`https://trip-tracker-api.herokuapp.com/api/v1/things/${thingId}`, {
       method: 'delete',
       headers: {
         'Accept': 'application/json',
@@ -89,7 +89,7 @@ class ThingsContainer extends React.Component {
       })
     return !thingNames.includes(thing.name)
     })
-    
+
     if (this.state.errors.length > 0) {
       return (
         <ThingsList errors={this.state.errors} />

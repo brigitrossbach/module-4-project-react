@@ -1,5 +1,5 @@
 export function createTrip(tripParams) {
-  return fetch('http://localhost:3000/api/v1/trips', {
+  return fetch('https://trip-tracker-api.herokuapp.com/api/v1/trips', {
       method: 'post',
       body: tripParams,
       headers: {
