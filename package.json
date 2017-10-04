@@ -1,7 +1,6 @@
 {
   "name": "mod-4-project-react",
   "version": "0.1.0",
-  "homepage": "http://brigitrossbach.github.io/trip-tracker",
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
@@ -17,8 +16,7 @@
     "start": "PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0"
