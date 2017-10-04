@@ -17,6 +17,12 @@ select {
   color: white;
 }
 
+.framed {
+  margin-top: 20px;
+  width: 625px;
+  height: 500px;
+}
+
 .yelp-error {
   margin-top: 50px;
   width: 500px;
@@ -34,7 +40,7 @@ select {
   background-color: #ffe6e6;
   border: 1px solid red;
   margin: 10px;
-  animation: shake 0.3s; 
+  animation: shake 0.3s;
   animation-iteration-count: 1;
 }
 

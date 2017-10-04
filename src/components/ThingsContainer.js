@@ -113,6 +113,7 @@ class ThingsContainer extends React.Component {
             <div className='space-holder'>   </div>
             <ThingsList things={this.state.savedThings} deleteSavedThing={this.deleteSavedThing} errors={this.state.errors} {...props}/>
             </div>)}}/>
+        <Route exact path='/me/trips/:id/map' render={(props) => <iframe className='framed' src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDUkfub5G4m6axoCvig-HHqa7qGfZRbBm0&q=${this.props.city}+${this.props.country}`}/>} />
       </div>
     )} else {
       return (
